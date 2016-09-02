@@ -2,7 +2,8 @@ defmodule Workwithelixir.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :workwithelixir,
+    [
+     app: :workwithelixir,
      version: "0.0.1",
      elixir: "~> 1.2",
      elixirc_paths: elixirc_paths(Mix.env),
@@ -10,7 +11,10 @@ defmodule Workwithelixir.Mixfile do
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      aliases: aliases(),
-     deps: deps()]
+     deps: deps(),
+     test_coverage: [tool: ExCoveralls],
+     preferred_cli_env: ["coveralls": :test, "coveralls.detail": :test, "coveralls.post": :test, "coveralls.html": :test],
+   ]
   end
 
   # Configuration for the OTP application.
@@ -55,6 +59,7 @@ defmodule Workwithelixir.Mixfile do
      {:earmark, "~> 1.0.1"},
      {:stripity_stripe, git: "https://github.com/robconery/stripity-stripe.git"},
      {:rss, git: "https://github.com/denispeplin/elixir-rss.git"},
+     {:excoveralls, "~> 0.5", only: :test},
    ]
   end
 

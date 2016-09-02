@@ -3,7 +3,7 @@ defmodule Workwithelixir.JobTest do
 
   alias Workwithelixir.Job
 
-  @valid_attrs %{company: "some content", company_twitter: "some content", company_url: "some content", job_description: "some content", location: "some content", paid: true, posted: %{day: 17, hour: 14, min: 0, month: 4, sec: 0, year: 2010}, reviewed_by: "some content", salary: "some content", status: "some content", title: "some content", list: ["some", "content"]}
+  @valid_attrs %{title: "some content", company: "some content", location: "some content", company_url: "some content", contact_email: "some content", job_description: "some content", paid: false, status: "in review", apply_instructions: "some content"}
   @invalid_attrs %{}
 
   test "changeset with valid attributes" do
