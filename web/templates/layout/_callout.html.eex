@@ -1,0 +1,32 @@
+<section class='bg-custom white w-100'>
+  <div class="bt b--black-10 pa3 ph5-ns">
+    <h2 class="f4 fw6 f1-ns measure m0">
+      Find the best Elixir jobs - full-time, part-time, on-location, or working remote from around the world.
+    </h2>
+    <p class="f5 f4-ns fw4 b">
+      Looking to hire a great developer? For $150, you can reach thousands of Elixir developers for the next thirty days. <a class='white' href="/jobs/new">Post a job</a>
+    </p>
+  </div>
+</section>
+
+<%= if !assigns[:hide_search] do %>
+  <section class='w-100 mb4'>
+    <div class="bt b--black-10 pa3 ph5-ns">
+      <p class='f5 f4-ns fw4 b dark-gray'>
+        <strong>Search for your next job. You can search any keyword (like "Los Angeles", "Erlang", "Phoenix" or "Remote").</strong>
+      </p>
+
+      <form action="/search" method="GET">
+        <input
+          class='pa2 w5'
+          name="query"
+          required
+          type="text"
+          placeholder="Search"
+          value="<%= assigns[:query] %>"
+        />
+      </form>
+    </div>
+  </section>
+<% end %>
+

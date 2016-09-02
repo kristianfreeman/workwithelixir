@@ -1,0 +1,24 @@
+<div class="b--black-10 pa2 ph5-ns pv3" data-url="<%= job_path(@conn, :show, @job) %>">
+  <h4 class='f3 tracked pa0 ma0'>
+    <%= link @job.title, to: job_path(@conn, :show, @job) %>
+  </h4>
+
+  <p class='f4 pv3 ma0'>
+    <%= if @job.remote do %>
+      <span class='pr2'>
+        <i class='gray fa fa-plane-o' aria-hidden='true' title="Remote"></i>
+      </span>
+    <% end %>
+
+    <%= @job.location %>
+  </p>
+
+  <p class='f5 tracked ttu gray pv0 ma0'>
+    <%= @job.company %>
+    <span class='pl2'>
+      <%= if !@job.permanent do %>
+        <i class='fa fa-briefcase-o' aria-hidden='true' title="Contract"></i>
+      <% end %>
+    </span>
+  </p>
+</div>

@@ -1,0 +1,10 @@
+<div class="column row">
+  <h1>Hey, Elixir Conf 2016!</h1>
+  <h3>We built a calendar so you can stay up to date with all the talks going on over the next couple days.</h3>
+  <p>You can view it below and add it to your Google Calendar.</p>
+  <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=support%40workwithelixir.com&amp;color=%231B887A&amp;ctz=America%2FNew_York" style="border-width:0" width="1000" height="600" frameborder="0" scrolling="no"></iframe>
+  <p><a href="https://dl.dropboxusercontent.com/u/278307/ElixirConf%202016%20Calendar.zip">Download .the .ics file from Dropbox</a> (for local calendars)</p>
+  <hr>
+  <h3>Have you looked at <a href="/">Work With Elixir</a> to find a great position working with Elixir and Phoenix?</h3>
+  <h3>Looking to hire an Elixir developer? <a href="/jobs/new">Post a job</a>.</h3>
+</div>

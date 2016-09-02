@@ -1,0 +1,39 @@
+<meta
+  property="og:site_name"
+  content="Work With Elixir"
+/>
+<meta
+  property="og:url"
+  content="https://workwithelixir.com/jobs/<%= @job.id %>"
+/>
+<meta
+  property="og:type"
+  content="website"
+/>
+<meta
+  property="og:title"
+  content="<%= @job.title %> - <%= @job.company %>"
+/>
+<meta
+  property="og:description"
+  content="<%= Workwithelixir.Job.truncated_description(@job) %>"
+/>
+
+<meta
+  name="twitter:domain"
+  value="workwithelixir.com"
+/>
+<meta
+  name="twitter:title"
+  content="<%= @job.title %> - <%= @job.company %>"
+/>
+<meta
+  name="twitter:description"
+  value="<%= Workwithelixir.Job.truncated_description(@job) %>"
+/>
+<meta name="twitter:label1" value="Location" />
+<meta name="twitter:data1" value="<%= @job.location %>" />
+<%= if @job.company_url do %>
+  <meta name="twitter:label2" value="Company URL" />
+  <meta name="twitter:data2" value="<%= @job.company_url %>" />
+<% end %>

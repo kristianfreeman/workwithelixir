@@ -1,0 +1,20 @@
+<div class="pa3 ph5-ns">
+  <h2>
+    <%= length @jobs %> results found for "<%= @query %>". <a href="/">See all jobs?</a>
+  </h2>
+</div>
+
+<%= for jobs_by_day <- Enum.chunk_by(@jobs, &(Workwithelixir.Job.format_date(&1))) |> Enum.reverse do %>
+  <%= if (Enum.at(jobs_by_day, 0)) do %>
+    <div class="bt b--black-10 pa3 ph5-ns">
+      <p class='f2'>
+        <%= Workwithelixir.Job.format_date(Enum.at(jobs_by_day, 0)) %>
+      </p>
+    </div>
+  <% end %>
+
+  <%= for job <- jobs_by_day do %>
+    <%= render "_job-row.html", %{conn: @conn, job: job} %>
+  <% end %>
+<% end %>
+

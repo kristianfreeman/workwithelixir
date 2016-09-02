@@ -1,0 +1,61 @@
+<article class="bt b--black-10 cf ph3 ph5-ns pv5">
+  <header class="fn fl-ns w-50-ns pr4-ns">
+    <h1 class="f2 lh-title fw9 mb3 mt0 pt3 bt bw2">
+      <%= @job.title %>
+    </h1>
+    <h2 class="near-gray lh-title">
+      <%= @job.location %>
+    </h2>
+    <h3 class="ttu tracked gray">
+      <%= @job.company %>
+    </h3>
+    <h4>
+      <%= link @job.company_url, to: @job.company_url %>
+    </h4>
+    <% if @job.company_twitter do %>
+      <h4 class="f7 gray">
+        <strong>Twitter: </strong>
+        <%= link @job.company_twitter, to: "https://twitter.com/#{@job.company_twitter}" %>
+      </h4>
+    <% end %>
+
+  </header>
+
+  <div class="fn fl-ns w-50-ns">
+    <% if @job.salary do %>
+      <p>
+        <strong>Salary: </strong>
+        <%= @job.salary %>
+      </p>
+    <% end %>
+
+    <div class="f5 lh-copy measure mt0-ns">
+      <%= raw(Earmark.to_html(@job.job_description)) %>
+    </div>
+
+    <div class="f5 lh-copy measure mt0-ns">
+      <%= raw(Earmark.to_html(@job.apply_instructions)) %>
+    </div>
+
+    <%= if @job.apply_url do %>
+      <h4><a class="button" href="<%= @job.apply_url %>">Visit application site</a></h4>
+    <% end %>
+</article>
+
+<article class="cf ph3 ph5-ns pv5">
+  <div class="fn fl-ns w-50-ns">
+    <h4>
+      <strong>Posted on <%= Workwithelixir.Job.format_date(@job) %></strong>
+    </h4>
+
+    <p class='f5'>
+      <%# <i class='pr1 fa fa-twitter'></i> %>
+      <a
+        href='https://twitter.com/intent/tweet?related=workwithelixir%2Cimkmf&text=<%= html_escape("#{ @job.company} is hiring a #{@job.title}:") %>&url=<%= html_escape("https://workwithelixir.com/jobs/#{@job.id}") %>'
+        target="_blank"
+      >
+        Share job on Twitter
+      </a>
+    </p>
+  </div>
+</article>

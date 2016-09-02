@@ -1,0 +1,24 @@
+<div class='ph5 bt b--black-10'>
+  <h3>Payment for <%= @job.title %> - <%= @job.company %></h3>
+
+  <%= if @job.paid do %>
+    <p>Thanks for your payment - you should see your job posting on the site shortly.</p>
+  <% else %>
+    <p>Hi there!</p>
+    <p>To complete posting your job on Work With Elixir, we'll charge your credit card $150.</p>
+    <p>We use Stripe, a secure payment processor, so we don't store any of your credit card information. Thanks!</p>
+
+    <%= form_tag("/jobs/#{@job.id}/accept_charge", method: :post) do %>
+      <script
+        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-amount="15000"
+        data-description="Job posting - 30 days"
+        data-image="/images/workwithelixir.svg"
+        data-key="<%= @public_key %>"
+        data-locale="auto"
+        data-name="Work With Elixir"
+        data-zip-code="true"
+      >
+    <% end %>
+  <% end %>
+</div>

@@ -1,0 +1,77 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label f, :title, class: "control-label" %>
+    <%= text_input f, :title, class: "form-control" %>
+    <%= error_tag f, :title %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :company, class: "control-label" %>
+    <%= text_input f, :company, class: "form-control" %>
+    <%= error_tag f, :company %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :salary, class: "control-label" %>
+    <%= text_input f, :salary, class: "form-control" %>
+    <%= error_tag f, :salary %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :location, class: "control-label" %>
+    <%= text_input f, :location, class: "form-control" %>
+    <%= error_tag f, :location %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :company_url, class: "control-label" %>
+    <%= text_input f, :company_url, class: "form-control" %>
+    <%= error_tag f, :company_url %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :company_twitter, class: "control-label" %>
+    <%= text_input f, :company_twitter, class: "form-control" %>
+    <%= error_tag f, :company_twitter %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :job_description, class: "control-label" %>
+    <%= textarea f, :job_description, class: "form-control" %>
+    <%= error_tag f, :job_description %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :paid, class: "control-label" %>
+    <%= checkbox f, :paid, class: "form-control" %>
+    <%= error_tag f, :paid %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :status, class: "control-label" %>
+    <%= text_input f, :status, class: "form-control" %>
+    <%= error_tag f, :status %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :reviewed_by, class: "control-label" %>
+    <%= text_input f, :reviewed_by, class: "form-control" %>
+    <%= error_tag f, :reviewed_by %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :posted, class: "control-label" %>
+    <%= datetime_select f, :posted, class: "form-control" %>
+    <%= error_tag f, :posted %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>

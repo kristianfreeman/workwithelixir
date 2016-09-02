@@ -1,0 +1,15 @@
+<nav class="dt w-100 border-box pa3 ph5-ns">
+  <div class="dtc v-mid mid-gray link w2 mr4 mr2-ns">
+    <img
+      alt="Work With Elixir"
+      class='h2'
+      title="Work With Elixir"
+      src="<%= static_path(@conn, "/images/workwithelixir.svg") %>"
+    />
+  </div>
+  <div class="dtc v-mid w5">
+    <a class="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" href="/" title="Jobs">Jobs</a>
+    <a class="link dim dark-gray f6 f5-ns dib mr3 mr4-ns" href="/jobs/new" title="Post a job">Post a job</a>
+    <a class="link dim dark-gray f6 f5-ns dib" href="/feed" title="RSS Feed">RSS Feed</a>
+  </div>
+</nav>

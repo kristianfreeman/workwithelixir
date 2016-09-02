@@ -1,0 +1,9 @@
+<div class="bt b--black-10 pa3 ph5-ns">
+  <h2 class='fw4 f6 ttu tracked pb3'>About Work With Elixir</h2>
+  <p class='f4 measure lh-copy mb4 mt0'>
+    <strong>Work With Elixir</strong> is a job board for Elixir/Phoenix jobs. We accept postings from around the world, whether full-time, freelance, remote, or on-site.
+  </p>
+  <p class='f4 measure lh-copy mb4 mt0'>
+  Have questions? You can contact us at <a href="mailto:support@workwithelixir.com">support@workwithelixir.com</a>. <strong>Work With Elixir</strong> is run by <a href="https://twitter.com/imkmf">Kristian Freeman</a>. Say hi!
+  </p>
+</div>

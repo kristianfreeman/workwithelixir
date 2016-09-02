@@ -1,0 +1,9 @@
+<footer class="pv4 ph3 ph5-m ph6-l mid-gray">
+  <small class="f6 db tc">© 2016 <b class="ttu">Work With Elixir</b>, All Rights Reserved</small>
+  <div class="tc mt3">
+    <a href="/about/" title="About" class="f6 dib ph2 link mid-gray dim">About</a>
+    <a href="mailto:support@workwithelixir.com" title="Contact" class="f6 dib ph2 link mid-gray dim">Contact</a>
+    <a href="https://twitter.com/workwithelixir" title="Twitter" class="f6 dib ph2 link mid-gray dim">Twitter</a>
+  </div>
+</footer>
+
