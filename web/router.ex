@@ -45,7 +45,6 @@ defmodule Workwithelixir.Router do
     get "/", JobController, :index
 
     get "/about", PageController, :about
-    get "/elixirconf", PageController, :elixirconf
 
     get "/search", JobController, :search
     get "/jobs/new", JobController, :new
